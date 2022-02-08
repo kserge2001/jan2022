@@ -38,11 +38,11 @@ end
 ### project1  
 
 
-#### 1. You just got your first job as linux Engineer.
-#### During your release activities, a deployment is failing, with the following error : 
+#### 1. Consider you are a linux Engineer.
+#### During the release to production, a deployment is failing, with the following error : 
 #### /opt/deployment/uat/deploy.cfg: No such file or directory
-#### So the developers code is trying to access the deploy.cfg file.
-#### Check on the server, if the path that the developer has put in his code is correct (provide the correct path to the developers). 
+#### So the developers code is trying to access the deploy.cfg file with no avail.
+#### Check on the server, if the path that the developer has put in his code is correct (provide the correct path to the developers if /opt/deployment/uat/deploy.cfg is not correct). 
 
 #### 2.  There is a file on the system called success.txt, run a command to display its content.
 
@@ -70,7 +70,7 @@ end
 #### 12. Herman is a new contractor in the team and is complaining that he can not login to this server. 
 #### please investigate what can be the issue and solve it so he can login to the server
 
-#### 13. go ahead and force Herman to change his password on the next login
+#### 13. go ahead and force Herman to change his password on his next login
 
 #### 14. A deployment to this server is failing and apparently it is due to selinux been set to enforcing mode. 
 #### you are tasked to disable it. Below are the steps to do that. go ahead and do it.
@@ -80,7 +80,7 @@ end
 ######    to
 ######    SELINUX=disable
 ######    save and quit
-
+######    NB:( you can read more about selinux feature later on this link https://www.redhat.com/en/topics/linux/what-is-selinux ) 
 #### 15.  this server will be used as a webserver. Please go ahead and configure apache on it.
 #### It should display below message on the browser
 ## "I feel like I am sitting in the office working for real"

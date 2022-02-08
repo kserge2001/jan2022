@@ -40,7 +40,7 @@ end
 
 #### 1. Consider you are a linux Engineer.
 #### During the release to production, a deployment is failing, with the following error : 
-#### /opt/deployment/uat/deploy.cfg: No such file or directory
+#### /opt/deployment/uat/deploy.cfg: No such file or directory, Deployment failed!! 
 #### So the developers code is trying to access the deploy.cfg file with no avail.
 #### Check on the server, if the path that the developer has put in his code is correct (provide the correct path to the developers if /opt/deployment/uat/deploy.cfg is not correct). 
 
@@ -78,7 +78,7 @@ end
 ######    change
 ######    SELINUX=enforcing
 ######    to
-######    SELINUX=disable
+######    SELINUX=permissive
 ######    save and quit
 ######    NB:( you can read more about selinux feature later on this link https://www.redhat.com/en/topics/linux/what-is-selinux ) 
 #### 15.  this server will be used as a webserver. Please go ahead and configure apache on it.

@@ -65,5 +65,5 @@ end
 ### 7- what is a soft link?
 ### 8- what is sticky bit ?
 ### 9- what port does these services run on ?  SSH, HTTP, HTTPS, FTP , DNS 
-### 10- 
+### 10- there is a file on the system that content a list of employees called emp.csv run a command that will display just the emails of employees.
 ### 11-Consider you are sitting on an interview, describe a troubleshooting scenario you encounter.

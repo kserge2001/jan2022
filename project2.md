@@ -1,5 +1,42 @@
 #Project2   version: 4  
 
+# Server creation steps: 
+```
+cd ~
+mkdir utrains-project
+cd utrains-project
+mkdir project1
+cd project1
+code Vagrantfile
+paste below code into the Vagrantfile and then save.
+vagrant up
+vagrant ssh
+```
+## Vagrantfile instructions:
+
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # load de centos7 box from vagrant cloud
+  config.vm.box = "utrains/centos7"
+  config.vm.box_version = "4.0"
+  config.vm.network "private_network", ip: "192.168.56.32"
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = 1024
+    #vb.name = "centos-project2"
+    vb.cpus = 2
+  end
+  #change the value of the SSH configuration file, then restart the ssh service
+  config.vm.provision "shell", inline: <<-SHELL
+   sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+   sudo systemctl restart sshd
+  SHELL
+end
+```
+
+
 
 ###  1- At work you are in the middleware team and as such, there is a request from the DevOps team to build a jenkins server. 
 ### The documentation on the process to follow is in the confluence page. follow that and install a jenkins server for the devops team team.

@@ -3,9 +3,8 @@
 # Server creation steps: 
 ```
 cd ~
-mkdir utrains-project
 cd utrains-project
-mkdir project1
+mkdir project2
 cd project1
 code Vagrantfile
 paste below code into the Vagrantfile and then save.

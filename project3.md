@@ -1,4 +1,4 @@
-#Project2   version: 5  
+#Project3   version: NA  
 
 # Server creation steps: 
 ```
@@ -45,5 +45,5 @@ end
 ### 2- AT work, there are documents for installation of various applications stored in confluence, and during the meeting , the obersavation was that some of them need to be automated.
 ### a- Go ahead and automate the installation of Sonarqube, using a bash shell script. ( we should be able to copy the script to the server and execute it.)
 
-### b- For better collaboration at work, we need to keep the scripts in github. Create a repo in github and push your scripts there. 
+### b- For better collaboration at work, we need to keep the scripts in github. Create a repo in github called middleware-scripts and push your scripts there. 
 

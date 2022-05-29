@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   # load de centos7 box from vagrant cloud
   config.vm.box = "utrains/centos7"
   config.vm.box_version = "3.0"
-  config.vm.network "private_network", ip: "192.168.56.30"
+  config.vm.network "private_network", ip: "192.168.56.15"
   config.vm.provider "virtualbox" do |vb|
     vb.memory = 1024
     #vb.name = "centos-project1"

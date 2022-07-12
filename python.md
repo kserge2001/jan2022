@@ -1,6 +1,6 @@
 #Python Projects   version: NA  
 
-# Script modification tickets ( this sctipt is used by your team to check end points but will throw an error when the url doent have http so we need to add an exception for that to avoid the code breaking when the url is not good.(example: google.com wont work but http://google.com will.)
+# Script modification tickets ( this sctipt is used by your team to check end points but will throw an error when the url doent have http so we need to add an exception for that to avoid the code breaking when the url is not good.(example: google.com won't work but http://google.com will.)
 # the : 
 ```
 #Program to fetch the http status code give the url/api

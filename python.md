@@ -116,6 +116,8 @@ url=pyqrcode.create(s)
 url.show()
 url.png(d, scale =6)
 ```
+### 4- At work, we have an internal application running on postgressql, and we need a python script that will take backup of the database and upload it in s3 bucket everyday at a certain time. 
 
+### 4- AT work , there is a need to a python script that can convert .xml files to json format. ( give it a try)
 
 

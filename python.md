@@ -94,15 +94,28 @@ show_instances(ec2_list)
 
 
 
-###  1- At work you are in the middleware team and as such, there is a request from the DevOps team to build a Sonarqube server. 
-### The documentation on the process to follow is in the confluence page. follow that and install a Sonarqube server for the devops team.
-### The deliverable will be the url of Sonarqube server, the username and password to access Sonarqube.
-### Confluence url: https://dataservicegroup.atlassian.net/wiki/spaces/RET/pages/1978105890/Sonarqube+installation+on+Centos
-### username: unixteam24@gmail.com
-### password: school123
+### 3- we have a script that we use to generate QR codes. it needs two input the message/url and the file name for the qr code.
+Please lookto how to use the argparser module to set it in the way that we can run it with arguments and provide those inputs.
+-h or --help should show how to use the script, -u or --url should be used to provide a url and -i or --im shoulb be used to provide the fileimage name. see the script bellow:
 
-### 2- AT work, there are documents for installation of various applications stored in confluence, and during the meeting , the obersavation was that some of them need to be automated.
-### a- Go ahead and automate the installation of Sonarqube, using a bash shell script. ( we should be able to copy the script to the server and execute it.)
+```
+import pyqrcode
+import png
+from pyqrcode import QRCode
+# Text which is to be converted to QR code
+print("Enter text to convert")
+s=input(": ")
+# Name of QR code png file
+print("Enter image name to save")
+n=input(": ")
+# Adding extension as .pnf
+d=n+".png"
+# Creating QR code
+url=pyqrcode.create(s)
+# Saving QR code as  a png file
+url.show()
+url.png(d, scale =6)
+```
 
-### b- For better collaboration at work, we need to keep the scripts in github. Create a repo in github called middleware-scripts and push your scripts there. 
+
 

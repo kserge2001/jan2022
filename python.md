@@ -1,6 +1,6 @@
 # Python Projects   version: NA  
 
-### Script modification tickets ( this sctipt is used by your team to check end points but will throw an error when the url doent have http so we need to add an exception for that to avoid the code breaking when the url is not good.(example: google.com won't work but http://google.com will.)
+### 1- Script modification tickets ( this sctipt is used by your team to check end points but will throw an error when the url doent have http so we need to add an exception for that to avoid the code breaking when the url is not good.(example: google.com won't work but http://google.com will.)
 ## the script is below: 
 ```
 #Program to fetch the http status code give the url/api
@@ -26,26 +26,70 @@ except URLError as e:
     print('Status :',  str(e.reason).split(']')[0].replace('[','') +  ' ' + emoji.emojize(':thumbs_down:'))
     print('Message : '+ str(e.reason).split(']')[1])
 ```
-## Copy the script run it and see how you can correct it:
+### 2-  The dev team is using a script to inventory instance infos from aws using the boto3 module. (the script is querying all instances with tag {environment: dev } this value is hard coded in the script. please modify the script so the qa team and eventually the subsequent team can use it to do the same.
 
 ```
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+#!/usr/bin/python
+'''
+This script starts all instances with a specific tag.
+'''
 
-Vagrant.configure("2") do |config|
-  # load de centos7 box from vagrant cloud
-  config.vm.box = "centos/7"
-  config.vm.network "private_network", ip: "192.168.56.33"
-  config.vm.provider "virtualbox" do |vb|
-    vb.memory = 1024
-    vb.cpus = 2
-  end
-  #change the value of the SSH configuration file, then restart the ssh service
-  config.vm.provision "shell", inline: <<-SHELL
-   sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-   sudo systemctl restart sshd
-  SHELL
-end
+import boto3
+
+def instances_find(name, value):
+    '''
+    Finds instance id's based on tags.
+    Returns a list of instances found.
+    '''
+    list_instances = []
+    # filter based on tags
+    filters =[
+        {
+        'Name': name,
+        'Values': [
+            value,
+            ]
+        },
+    ]
+    instances = ec2_resource.instances.filter(Filters=filters)
+    
+    
+    for instance in instances:
+        
+        # for each instance, append to list
+        list_instances.append(instance)
+        #list_instances.append(instance.describe_instances())
+
+    return list_instances
+
+def show_instances(instances):
+    header = "instance.id\t\t instance_type\t\t instance_image.id"
+    print(header)
+    for instance in instances:
+        instance_details = f"{instance.id}\t {instance.instance_type} \t\t{instance.image_id}"
+        print(instance_details)
+
+
+def instances_start(list):
+    '''
+    Starts instances defined in the list.
+    '''
+    ec2_client.start_instances(InstanceIds=list)
+
+# enter tag name and value
+tag_name = 'tag:environment'
+tag_value = 'dev'
+
+ec2_resource = boto3.resource('ec2')
+ec2_client = boto3.client('ec2')
+
+# find instances
+ec2_list = instances_find(tag_name, tag_value)
+# start instances
+# ec2_stop = instances_start(ec2_list)
+#print('started instances: ' + str(ec2_list))
+show_instances(ec2_list)
+
 ```
 
 

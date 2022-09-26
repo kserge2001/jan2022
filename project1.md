@@ -85,5 +85,5 @@ end
 ######    NB:( you can read more about selinux feature later on this link https://www.redhat.com/en/topics/linux/what-is-selinux ) 
 #### 16.  this server will be used as a webserver. Please go ahead and configure apache on it.
 #### It should display below message on the browser
-## "I feel like I am sitting in the office working for real"
+## "I feel like I am sitting in the office working for real and making the big $$$$"
 

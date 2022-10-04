@@ -40,7 +40,7 @@ end
 ###  1- At work you are in the middleware team and as such, there is a request from the DevOps team to build a jenkins server. 
 ### The documentation on the process to follow is in the confluence page. follow that and install a jenkins server for the devops team.
 ### The deliverable will be the url of jenkins server, the username and password to access jenkins.
-### Confluence url: https://dataservicegroup.atlassian.net/wiki/spaces/RET/pages/1976107009/Jenkins+Installation+on+Centos7
+### Confluence url: https://dataservicegroup.atlassian.net/l/cp/QLkWo2r2
 ### username: unixteam24@gmail.com
 ### password: school123
 

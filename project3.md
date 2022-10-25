@@ -39,7 +39,7 @@ end
 ### The documentation on the process to follow is in the confluence page. follow that and install a Sonarqube server for the devops team.
 ### The deliverable will be the url of Sonarqube server, the username and password to access Sonarqube.
 ### Confluence url: https://dataservicegroup.atlassian.net/wiki/spaces/RET/pages/1978105890/Sonarqube+installation+on+Centos
-### username: unixteam24@gmail.com
+### username: unixtteam24@gmail.com
 ### password: school123
 
 ### 2- AT work, there are documents for installation of various applications stored in confluence, and during the meeting , the obersavation was that some of them need to be automated.

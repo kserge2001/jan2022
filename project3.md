@@ -38,7 +38,7 @@ end
 ###  1- At work you are in the middleware team and as such, there is a request from the DevOps team to build a Sonarqube server. 
 ### The documentation on the process to follow is in the confluence page. follow that and install a Sonarqube server for the devops team.
 ### The deliverable will be the url of Sonarqube server, the username and password to access Sonarqube.
-### Confluence url: https://dataservicegroup.atlassian.net/wiki/spaces/RET/pages/1978105890/Sonarqube+installation+on+Centos
+### Confluence url:  https://dataservicegroup.atlassian.net/wiki/spaces/RET/pages/1991246045/Sonarqube+installation+on+Centos-7
 ### username: unixtteam24@gmail.com
 ### password: school123
 

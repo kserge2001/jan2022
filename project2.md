@@ -62,7 +62,7 @@ end
 ### 3- There is an application running on this server thru apache, but for some reason, we are not able to start the httpd  daemon ( the apache web server daemon for centos) and this is making the application to be down. you can test that yourself by typing the ip address on the browser which will throw an error. when we run systemctl start httpd, it throws an error and point us to run systemctl status httpd to see a more verbose error message.  upon reading the message it looks like another application is consuming/using port 80. go ahead and help figure out what is that application and kill it, then start apache and check if the application is coming on your browser.
 
 ### 4- Type a command to check if port 8080 is open. 
-### 5- Type a command to check what app is listening on port 8080.
+### 5- Type a command to check what app is using port 8080.
 ### 6- run a command to install git on the server 
 ### 7- what is a soft link?
 ### 8- what is sticky bit ?
